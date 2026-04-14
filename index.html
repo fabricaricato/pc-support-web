@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechFix Pro — Soporte Técnico de PCs</title>
+  <meta name="description" content="Servicio profesional de soporte técnico para computadoras. Diagnóstico, reparación, formateo, armado de PCs y más. Soluciones rápidas y confiables." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo">
+        <i class="fa-solid fa-microchip"></i>
+        <span>Tech<strong>Fix</strong> Pro</span>
+      </a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn--primary navbar__cta">
+        <i class="fa-solid fa-headset"></i> Pedir Soporte
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    <div class="container hero__inner">
+      <div class="hero__badge animate-on-scroll">
+        <i class="fa-solid fa-bolt"></i> Soporte técnico profesional
+      </div>
+      <h1 class="hero__title animate-on-scroll">
+        Tu PC en las <span class="gradient-text">mejores manos</span>
+      </h1>
+      <p class="hero__subtitle animate-on-scroll">
+        Diagnóstico, reparación y optimización de computadoras. Resolvemos cualquier problema técnico con rapidez y garantía.
+      </p>
+      <div class="hero__actions animate-on-scroll">
+        <a href="#contacto" class="btn btn--primary btn--lg">
+          <i class="fa-solid fa-paper-plane"></i> Contactanos
+        </a>
+        <a href="#servicios" class="btn btn--outline btn--lg">
+          <i class="fa-solid fa-wrench"></i> Ver Servicios
+        </a>
+      </div>
+      <div class="hero__stats animate-on-scroll">
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="500">0</span><span>+</span>
+          <span class="hero__stat-label">PCs reparadas</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="98">0</span><span>%</span>
+          <span class="hero__stat-label">Clientes satisfechos</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="24">0</span><span>hs</span>
+          <span class="hero__stat-label">Tiempo de respuesta</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICIOS ========== -->
+  <section class="servicios" id="servicios">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-gear"></i> Lo que hacemos</span>
+        <h2 class="section-title">Nuestros <span class="gradient-text">Servicios</span></h2>
+        <p class="section-desc">Ofrecemos soluciones integrales para todo tipo de problemas informáticos</p>
+      </div>
+      <div class="servicios__grid">
+        <article class="service-card animate-on-scroll" id="service-diagnostico">
+          <div class="service-card__icon">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <h3 class="service-card__title">Diagnóstico</h3>
+          <p class="service-card__desc">Análisis completo de tu equipo para identificar fallas de hardware y software con precisión.</p>
+          <div class="service-card__shine"></div>
+        </article>
+        <article class="service-card animate-on-scroll" id="service-reparacion">
+          <div class="service-card__icon">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3 class="service-card__title">Reparación</h3>
+          <p class="service-card__desc">Reparamos componentes, solucionamos errores de sistema y devolvemos tu PC a su máximo rendimiento.</p>
+          <div class="service-card__shine"></div>
+        </article>
+        <article class="service-card animate-on-scroll" id="service-formateo">
+          <div class="service-card__icon">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+          <h3 class="service-card__title">Formateo e Instalación</h3>
+          <p class="service-card__desc">Instalación limpia de Windows, Linux o macOS con todos los drivers y programas que necesitas.</p>
+          <div class="service-card__shine"></div>
+        </article>
+        <article class="service-card animate-on-scroll" id="service-armado">
+          <div class="service-card__icon">
+            <i class="fa-solid fa-computer"></i>
+          </div>
+          <h3 class="service-card__title">Armado de PCs</h3>
+          <p class="service-card__desc">Armamos tu PC a medida según tus necesidades: gaming, trabajo, diseño o uso general.</p>
+          <div class="service-card__shine"></div>
+        </article>
+        <article class="service-card animate-on-scroll" id="service-limpieza">
+          <div class="service-card__icon">
+            <i class="fa-solid fa-wind"></i>
+          </div>
+          <h3 class="service-card__title">Limpieza y Mantenimiento</h3>
+          <p class="service-card__desc">Limpieza profunda de componentes internos, cambio de pasta térmica y mantenimiento preventivo.</p>
+          <div class="service-card__shine"></div>
+        </article>
+        <article class="service-card animate-on-scroll" id="service-optimizacion">
+          <div class="service-card__icon">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <h3 class="service-card__title">Optimización</h3>
+          <p class="service-card__desc">Mejoramos el rendimiento de tu equipo: upgrades de RAM, SSD, y ajustes avanzados del sistema.</p>
+          <div class="service-card__shine"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NOSOTROS ========== -->
+  <section class="nosotros" id="nosotros">
+    <div class="container nosotros__inner">
+      <div class="nosotros__content animate-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-users"></i> Quiénes somos</span>
+        <h2 class="section-title">Sobre <span class="gradient-text">Nosotros</span></h2>
+        <p class="nosotros__text">
+          Somos un equipo apasionado por la tecnología con experiencia en soporte técnico,
+          reparación y mantenimiento de computadoras. Nuestro compromiso es ofrecer
+          soluciones rápidas, efectivas y a precios accesibles.
+        </p>
+        <div class="nosotros__values">
+          <div class="value-item">
+            <div class="value-item__icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h4>Confianza</h4>
+              <p>Trabajo transparente y garantizado</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item__icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4>Rapidez</h4>
+              <p>Respuesta en menos de 24 horas</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item__icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <div>
+              <h4>Precio Justo</h4>
+              <p>Presupuestos claros sin sorpresas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nosotros__visual animate-on-scroll">
+        <div class="nosotros__card-stack">
+          <div class="floating-card floating-card--1">
+            <i class="fa-solid fa-microchip"></i>
+            <span>Hardware</span>
+          </div>
+          <div class="floating-card floating-card--2">
+            <i class="fa-solid fa-code"></i>
+            <span>Software</span>
+          </div>
+          <div class="floating-card floating-card--3">
+            <i class="fa-solid fa-network-wired"></i>
+            <span>Redes</span>
+          </div>
+          <div class="nosotros__main-visual">
+            <i class="fa-solid fa-desktop"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section class="contacto" id="contacto">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-envelope"></i> Contacto</span>
+        <h2 class="section-title">¿Necesitás <span class="gradient-text">ayuda</span>?</h2>
+        <p class="section-desc">Escribinos y te respondemos lo antes posible</p>
+      </div>
+      <div class="contacto__inner">
+        <form class="contacto__form animate-on-scroll" id="contactForm">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto" required>
+              <option value="" disabled selected>Seleccioná un servicio</option>
+              <option value="diagnostico">Diagnóstico</option>
+              <option value="reparacion">Reparación</option>
+              <option value="formateo">Formateo e Instalación</option>
+              <option value="armado">Armado de PC</option>
+              <option value="limpieza">Limpieza y Mantenimiento</option>
+              <option value="optimizacion">Optimización</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describí tu problema o consulta..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg form-submit">
+            <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+          </button>
+        </form>
+        <div class="contacto__info animate-on-scroll">
+          <div class="info-card">
+            <div class="info-card__icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <h4>WhatsApp</h4>
+            <p>+54 XXX XXX-XXXX</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon"><i class="fa-solid fa-envelope"></i></div>
+            <h4>Email</h4>
+            <p>contacto@techfixpro.com</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+            <h4>Ubicación</h4>
+            <p>Tu Ciudad, Argentina</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon"><i class="fa-solid fa-clock"></i></div>
+            <h4>Horario</h4>
+            <p>Lun - Sáb: 9:00 - 20:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="navbar__logo">
+          <i class="fa-solid fa-microchip"></i>
+          <span>Tech<strong>Fix</strong> Pro</span>
+        </a>
+        <p>Soporte técnico profesional para tu PC. Soluciones rápidas, confiables y a buen precio.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#service-diagnostico">Diagnóstico</a></li>
+          <li><a href="#service-reparacion">Reparación</a></li>
+          <li><a href="#service-formateo">Formateo</a></li>
+          <li><a href="#service-armado">Armado de PCs</a></li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h4>Seguinos</h4>
+        <div class="footer__social-icons">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 TechFix Pro. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
