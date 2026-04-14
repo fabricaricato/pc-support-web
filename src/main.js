@@ -125,34 +125,43 @@ if (statsContainer) {
   statsObserver.observe(statsContainer);
 }
 
+// ---------- EmailJS Init ----------
+const EMAILJS_PUBLIC_KEY = '6DZ3EhCHIitreps1X';      // Dashboard → Account → Public Key
+const EMAILJS_SERVICE_ID = 'service_bo8rqt6';      // Dashboard → Email Services → Service ID
+const EMAILJS_TEMPLATE_ID = 'template_sm05kpn';    // Dashboard → Email Templates → Template ID
+
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
 // ---------- Contact Form ----------
 const contactForm = document.getElementById('contactForm');
+const submitBtn = contactForm.querySelector('.form-submit');
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // Simple validation
-  const formData = new FormData(contactForm);
-  const data = Object.fromEntries(formData);
+  // Disable button and show loading
+  const originalText = submitBtn.innerHTML;
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
 
-  let valid = true;
-  for (const [key, value] of Object.entries(data)) {
-    if (!value.trim()) {
-      valid = false;
-      break;
-    }
-  }
-
-  if (valid) {
-    // Show success message
-    contactForm.innerHTML = `
-      <div class="form-success">
-        <i class="fa-solid fa-circle-check"></i>
-        <h3>¡Mensaje enviado!</h3>
-        <p>Nos pondremos en contacto con vos lo antes posible.</p>
-      </div>
-    `;
-  }
+  // Send email via EmailJS
+  emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm)
+    .then(() => {
+      // Show success message
+      contactForm.innerHTML = `
+        <div class="form-success">
+          <i class="fa-solid fa-circle-check"></i>
+          <h3>¡Mensaje enviado!</h3>
+          <p>Me pondré en contacto con vos lo antes posible.</p>
+        </div>
+      `;
+    })
+    .catch((error) => {
+      console.error('EmailJS error:', error);
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+      alert('Hubo un error al enviar el mensaje. Por favor, intentá de nuevo o escribime por WhatsApp.');
+    });
 });
 
 // ---------- Smooth anchor scroll for all anchor links ----------
