@@ -516,36 +516,36 @@ button, input, textarea, select {
   line-height: 1.7;
 }
 
-/* ---------- NOSOTROS ---------- */
-.nosotros {
+/* ---------- SOBRE MÍ ---------- */
+.sobre-mi {
   padding: var(--space-5xl) 0;
   background: var(--c-bg-alt);
   position: relative;
 }
 
-.nosotros__inner {
+.sobre-mi__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-4xl);
   align-items: center;
 }
 
-.nosotros__content .section-tag {
+.sobre-mi__content .section-tag {
   display: inline-flex;
 }
 
-.nosotros__content .section-title {
+.sobre-mi__content .section-title {
   text-align: left;
 }
 
-.nosotros__text {
+.sobre-mi__text {
   font-size: var(--fs-md);
   color: var(--c-text-light);
   line-height: 1.8;
   margin-bottom: var(--space-2xl);
 }
 
-.nosotros__values {
+.sobre-mi__values {
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
@@ -589,20 +589,20 @@ button, input, textarea, select {
   color: var(--c-text-muted);
 }
 
-/* Nosotros Visual */
-.nosotros__visual {
+/* Sobre Mí Visual */
+.sobre-mi__visual {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.nosotros__card-stack {
+.sobre-mi__card-stack {
   position: relative;
   width: 320px;
   height: 320px;
 }
 
-.nosotros__main-visual {
+.sobre-mi__main-visual {
   position: absolute;
   inset: 0;
   display: flex;
@@ -913,21 +913,21 @@ button, input, textarea, select {
   .servicios__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .nosotros__inner {
+  .sobre-mi__inner {
     grid-template-columns: 1fr;
     gap: var(--space-3xl);
   }
-  .nosotros__visual {
+  .sobre-mi__visual {
     order: -1;
   }
-  .nosotros__content .section-title {
+  .sobre-mi__content .section-title {
     text-align: center;
   }
-  .nosotros__content .section-tag {
+  .sobre-mi__content .section-tag {
     display: flex;
     justify-content: center;
   }
-  .nosotros__text {
+  .sobre-mi__text {
     text-align: center;
   }
   .contacto__inner {
@@ -1001,7 +1001,7 @@ button, input, textarea, select {
     grid-template-columns: 1fr;
   }
 
-  .nosotros__card-stack {
+  .sobre-mi__card-stack {
     width: 260px;
     height: 260px;
   }
