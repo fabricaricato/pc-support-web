@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Reparaciones — TechFix Pro</title>
+  <meta name="description" content="Consultá el estado de tu reparación ingresando tu email o número de ticket. TechFix Pro — Soporte Técnico de PCs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container navbar__inner">
+      <a href="/" class="navbar__logo">
+        <i class="fa-solid fa-microchip"></i>
+        <span>Tech<strong>Fix</strong> Pro</span>
+      </a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="/" class="nav-link">Inicio</a></li>
+        <li><a href="/#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="/#sobre-mi" class="nav-link">Sobre mí</a></li>
+        <li><a href="/#contacto" class="nav-link">Contacto</a></li>
+        <li><a href="/mis-reparaciones.html" class="nav-link active">Mis Reparaciones</a></li>
+      </ul>
+      <a href="/#contacto" class="btn btn--primary navbar__cta">
+        <i class="fa-solid fa-headset"></i> Pedir Soporte
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO REPARACIONES ========== -->
+  <section class="reparaciones-hero" id="reparaciones-hero">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    <div class="container reparaciones-hero__inner">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-magnifying-glass"></i> Seguimiento</span>
+        <h1 class="section-title" style="font-size: var(--fs-4xl);">Estado de <span class="gradient-text">tu equipo</span></h1>
+        <p class="section-desc">Ingresá tu email o número de ticket para ver en qué estado está tu reparación.</p>
+      </div>
+
+      <!-- Search Form -->
+      <div class="reparaciones-search" id="reparacionesSearch">
+        <div class="reparaciones-search__tabs">
+          <button class="search-tab active" data-tab="email" id="tabEmail">
+            <i class="fa-solid fa-envelope"></i> Por Email
+          </button>
+          <button class="search-tab" data-tab="ticket" id="tabTicket">
+            <i class="fa-solid fa-hashtag"></i> Por Ticket
+          </button>
+        </div>
+        <form class="reparaciones-search__form" id="searchForm">
+          <div class="search-input-wrapper">
+            <div class="search-input-group" id="emailGroup">
+              <i class="fa-solid fa-envelope"></i>
+              <input 
+                type="email" 
+                id="searchEmail" 
+                placeholder="tu@email.com" 
+                autocomplete="email"
+              />
+            </div>
+            <div class="search-input-group" id="ticketGroup" style="display: none;">
+              <i class="fa-solid fa-hashtag"></i>
+              <input 
+                type="text" 
+                id="searchTicket" 
+                placeholder="TF-00042"
+                autocomplete="off"
+              />
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg search-btn" id="searchBtn">
+              <i class="fa-solid fa-magnifying-glass"></i> Consultar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Results Area -->
+      <div class="reparaciones-results" id="results">
+        <!-- Empty state (default) -->
+        <div class="results-empty" id="resultsEmpty">
+          <div class="results-empty__icon">
+            <i class="fa-solid fa-laptop-medical"></i>
+          </div>
+          <p>Ingresá tus datos arriba para consultar el estado de tu reparación.</p>
+        </div>
+
+        <!-- Loading state -->
+        <div class="results-loading" id="resultsLoading" style="display: none;">
+          <i class="fa-solid fa-circle-notch fa-spin"></i>
+          <p>Buscando tu reparación...</p>
+        </div>
+
+        <!-- Error state -->
+        <div class="results-error" id="resultsError" style="display: none;">
+          <div class="results-error__icon">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </div>
+          <h3>No encontramos reparaciones</h3>
+          <p>Verificá que los datos sean correctos o contactanos por WhatsApp.</p>
+          <a href="/#contacto" class="btn btn--outline" style="margin-top: var(--space-lg);">
+            <i class="fa-solid fa-headset"></i> Contactar Soporte
+          </a>
+        </div>
+
+        <!-- Success: repair cards -->
+        <div class="results-list" id="resultsList" style="display: none;">
+          <!-- Cards will be injected here by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="navbar__logo">
+          <i class="fa-solid fa-microchip"></i>
+          <span>Tech<strong>Fix</strong> Pro</span>
+        </a>
+        <p>Soporte técnico profesional para tu PC. Soluciones rápidas, confiables y a buen precio.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/#servicios">Servicios</a></li>
+          <li><a href="/#sobre-mi">Sobre mí</a></li>
+          <li><a href="/#contacto">Contacto</a></li>
+          <li><a href="/mis-reparaciones.html">Mis Reparaciones</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/#service-diagnostico">Diagnóstico</a></li>
+          <li><a href="/#service-reparacion">Reparación</a></li>
+          <li><a href="/#service-formateo">Formateo</a></li>
+          <li><a href="/#service-armado">Armado de PCs</a></li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h4>Seguinos</h4>
+        <div class="footer__social-icons">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 TechFix Pro. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/reparaciones.js"></script>
+</body>
+</html>

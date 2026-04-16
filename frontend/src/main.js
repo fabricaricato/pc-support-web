@@ -126,9 +126,9 @@ if (statsContainer) {
 }
 
 // ---------- EmailJS Init ----------
-const EMAILJS_PUBLIC_KEY = '6DZ3EhCHIitreps1X';      // Dashboard → Account → Public Key
-const EMAILJS_SERVICE_ID = 'service_bo8rqt6';      // Dashboard → Email Services → Service ID
-const EMAILJS_TEMPLATE_ID = 'template_sm05kpn';    // Dashboard → Email Templates → Template ID
+const EMAILJS_PUBLIC_KEY = '6DZ3EhCHIitreps1X';
+const EMAILJS_SERVICE_ID = 'service_bo8rqt6';
+const EMAILJS_TEMPLATE_ID = 'template_sm05kpn';
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
